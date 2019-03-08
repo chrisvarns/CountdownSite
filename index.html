@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 html, body {
   font-family: Arial, Helvetica, sans-serif;
   background: black;
-  height: 100%;
-}
-
-.container { 
+  margin: 0;
   height: 100%;
   width: 100%;
+}
+.container {
+  height: 100%;
   position: relative;
 }
 
-.content {
-  background: black;
-  color: white;
-  text-align: center; /* center the text */
-  font-size: 40px;
-  margin: 0;
+.vertical-center {
   position: absolute;
   top: 50%;
-  left: 50%;
+  width: 100%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 50px;
 }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <div class="content">
-    <h1>365</h1>
+  <div class="vertical-center">
+    <p>365</p>
   </div>
 </div>
 
