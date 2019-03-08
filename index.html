@@ -9,10 +9,6 @@ html, body {
   height: 100%;
   width: 100%;
 }
-.container {
-  height: 100%;
-  position: relative;
-}
 
 .vertical-center {
   position: absolute;
@@ -28,11 +24,20 @@ html, body {
 </head>
 <body>
 
-<div class="container">
-  <div class="vertical-center">
-    <p>365</p>
-  </div>
+<div class="vertical-center">
+<p id=numDays>365</p>
 </div>
+
+<script>
+function howManyDays() {
+	today=new Date();
+	var dday=new Date(2019, 07, 01);
+	var one_day=1000*60*60*24;
+	var numdays = Math.ceil((dday.getTime()-today.getTime())/(one_day));
+	return numdays
+}
+document.getElementById("numDays").innerHTML = howManyDays();
+</script>
 
 </body>
 </html>
